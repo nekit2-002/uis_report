@@ -1,0 +1,94 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Layout
+\usepackage{geometry}
+\geometry{left=16mm}
+\geometry{right=10mm}
+\geometry{top=1cm}
+\geometry{bottom=1cm}
+
+% Paragraph
+\usepackage{indentfirst}
+\setlength{\parindent}{0.75cm}
+\linespread{1.25}
+
+% Font
+\usepackage{fontspec}
+\usepackage[english,russian]{babel}
+\usepackage{microtype}
+
+% \usepackage{polyglossia}
+% \setmainlanguage{russian}
+% \setotherlanguage{english}
+
+% \newfontfamily{\cyrillicfont}{Droid Serif}
+% \newfontfamily{\cyrillicfontrm}{Droid Serif}
+% \newfontfamily{\cyrillicfontsf}{Droid Sans}
+% \newfontfamily{\cyrillicfonttt}{DejaVu Sans Mono}
+
+\setmainfont{Times New Roman}
+\setromanfont{Times New Roman}
+\setsansfont{Droid Sans}
+\setmonofont{DejaVu Sans Mono}
+
+% Hyphens
+\usepackage{hyphenat}
+\usepackage{ucharclasses}
+\setTransitionsForLatin{\begingroup\hyphenrules{english}}{\endgroup}
+
+% Formulas
+\usepackage{amssymb, amsfonts, amsmath}
+
+% Miscellaneous
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{multirow}
+
+% Hyper references
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks,
+    allcolors=black
+}
+
+% Images
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%Including title
+\usepackage{pdfpages}
+
+% Figures
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\usepackage{subcaption}
+\renewcommand\thesubfigure{\asbuk{subfigure})}
+\captionsetup[subfigure]{labelformat=simple, labelsep=space}
+
+% Counters
+\usepackage[figure,table,page]{totalcount}
+\usepackage{totcount}
+
+% Code listings
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\lstdefinestyle{codestyle}{
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\bibliographystyle{gost780s}
+
